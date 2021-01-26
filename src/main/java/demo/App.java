@@ -24,7 +24,8 @@ public class App {
         Tensor output = result.toTensor();
         Logger logger = Logger.getLogger("test");
         logger.info("shape: " + Arrays.toString(output.shape()));
-        logger.info("data: " + Arrays.toString(output.getDataAsDoubleArray()));
+//        logger.info("data: " + Arrays.toString(output.getDataAsDoubleArray()));
+        logger.info("data: " + Arrays.toString(output.getDataAsFloatArray()));
 
         // Workaround for https://github.com/facebookincubator/fbjni/issues/25
         System.exit(0);

@@ -10,16 +10,16 @@ import java.util.logging.Logger;
 public class App {
     public static void main(String[] args) {
         Module mod = Module.load("demo-model.pt1");
-//        Tensor data =
-//                Tensor.fromBlob(
-//                        new float[][]{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f}, //data
-//                        new long[]{6,} //shape
-//                );
         Tensor data =
                 Tensor.fromBlob(
-                        new long[]{6,}, //shape
-                        new double[]{1.0, 2.0, 3.0, 4.0, 5.0, 6.0} //data
+                        new float[][]{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f}, //data
+                        new long[]{6,} //shape
                 );
+//        Tensor data =
+//                Tensor.fromBlob(
+//                        new long[]{6,}, //shape
+//                        new double[]{1.0, 2.0, 3.0, 4.0, 5.0, 6.0} //data
+//                );
         IValue result = mod.forward(IValue.from(data), IValue.from(3.0));
         Tensor output = result.toTensor();
         Logger logger = Logger.getLogger("test");

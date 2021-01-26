@@ -5,6 +5,7 @@ import org.pytorch.Module;
 import org.pytorch.Tensor;
 
 import java.util.Arrays;
+import java.util.Logger;
 
 public class App {
     public static void main(String[] args) {

@@ -12,7 +12,7 @@ public class App {
         Module mod = Module.load("demo-model.pt1");
         Tensor data =
                 Tensor.fromBlob(
-                        new float[][]{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f}, //data
+                        new float[]{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f}, //data
                         new long[]{6,} //shape
                 );
 //        Tensor data =

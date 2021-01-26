@@ -17,8 +17,8 @@ public class App {
 //                );
         Tensor data =
                 Tensor.fromBlob(
-                        new double[]{1.0, 2.0, 3.0, 4.0, 5.0, 6.0} //data
-                        new long[]{6,}, //shape
+                        new double[]{1.0, 2.0, 3.0, 4.0, 5.0, 6.0}, //data
+                        new long[]{6,} //shape
                 );
 //        Tensor data =
 //                Tensor.fromBlob(

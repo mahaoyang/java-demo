@@ -17,15 +17,20 @@ public class App {
 //                );
         Tensor data =
                 Tensor.fromBlob(
-                        new double[]{1.0, 2.0, 3.0, 4.0, 5.0, 6.0}, //data
-                        new long[]{6,} //shape
+                        new double[]{{1., 2., 3., 2., 6., 4., 4., 5., 6.}, //data
+                                new long[]{3, 3} //shape
+                );
+        Tensor weight =
+                Tensor.fromBlob(
+                        new double[]{1.0, 1.0, 1.0}, //data
+                        new long[]{3,} //shape
                 );
 //        Tensor data =
 //                Tensor.fromBlob(
 //                        new long[]{6,}, //shape
 //                        new double[]{1.0, 2.0, 3.0, 4.0, 5.0, 6.0} //data
 //                );
-        IValue result = mod.forward(IValue.from(data), IValue.from(3.0));
+        IValue result = mod.forward(IValue.from(data), IValue.from(weight));
         Tensor output = result.toTensor();
         Logger logger = Logger.getLogger("test");
         logger.info("shape: " + Arrays.toString(output.shape()));
@@ -35,4 +40,4 @@ public class App {
         // Workaround for https://github.com/facebookincubator/fbjni/issues/25
         System.exit(0);
     }
-}
+    }

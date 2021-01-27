@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class App {
     public static void main(String[] args) {
-        Module mod = Module.load("demo-model.pt1");
+        Module mod = Module.load("torch_weighted.pt1");
 //        Tensor data =
 //                Tensor.fromBlob(
 //                        new float[]{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f}, //data

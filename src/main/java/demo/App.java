@@ -23,7 +23,7 @@ public class App {
         Tensor weight =
                 Tensor.fromBlob(
                         new double[]{1.0, 1.0, 1.0}, //data
-                        new long[]{3,} //shape
+                        new long[]{1, 3} //shape
                 );
 //        Tensor data =
 //                Tensor.fromBlob(

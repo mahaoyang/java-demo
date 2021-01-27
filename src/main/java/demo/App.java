@@ -17,8 +17,8 @@ public class App {
 //                );
         Tensor data =
                 Tensor.fromBlob(
-                        new double[]{{1., 2., 3., 2., 6., 4., 4., 5., 6.}, //data
-                                new long[]{3, 3} //shape
+                        new double[]{1., 2., 3., 2., 6., 4., 4., 5., 6.}, //data
+                        new long[]{3, 3} //shape
                 );
         Tensor weight =
                 Tensor.fromBlob(
@@ -40,4 +40,4 @@ public class App {
         // Workaround for https://github.com/facebookincubator/fbjni/issues/25
         System.exit(0);
     }
-    }
+}
